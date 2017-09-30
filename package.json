@@ -1,0 +1,19 @@
+{
+  "name": "tintasstarlux",
+  "version": "1.0.0",
+  "description": "Site tintas starlux",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "?"
+  },
+  "keywords": [
+    "tintas",
+    "starlux"
+  ],
+  "author": "Amanda Avelino",
+  "license": "ISC"
+}

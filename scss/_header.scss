@@ -1,0 +1,157 @@
+/* Header Topo */
+
+    #hd-principal
+    {
+        background-color: $bgColorHeader;
+    }
+
+    .hd-top 
+    {
+        background: $bgColorHeader url("../imgs/bg-header-top.gif") repeat 0 0;
+        border-bottom: 1px solid $borderBottomHeader;
+        padding: 30px 0;
+    }
+
+    .redes-sociais
+    {
+        float: left;
+        list-style-type: none;
+        margin: 15px 0;
+        padding: 0;
+
+        li 
+        {
+            border-top-left-radius: 8px;
+            border-bottom-right-radius: 8px;        
+            display: inline-block;
+            overflow: hidden;
+            margin-right: 4px;
+
+            &:last-child
+            {
+                margin-right: 0;
+            }
+
+            a 
+            {
+                background-color: $bgIcons;
+                display: block;
+                list-style-type: none;
+                padding: 7px;
+                transition: $transitionAll5s;  
+                
+                &:hover 
+                {
+                    background-color: $bgIconsHover;
+                }            
+
+            }
+
+            img 
+            {
+                border-radius: 0;
+            }
+
+        }
+    }
+
+    .ss-header 
+    {
+        @include make-lg-column(4);
+        padding: 0;
+        text-align: center;
+        
+        a  
+        {
+            display: inline-block;
+            width: auto;
+        }
+    }
+
+    .btn-header
+    {
+        margin: 15px 0;
+    }
+
+/* Header Bottom */
+
+    .hd-bottom
+    {
+        background: $bgColorHeaderBottom url("../imgs/bg-header-bottom.gif") repeat 0 0;;
+    }
+
+    .menu 
+    {
+        padding: 30px 0;
+
+        ul 
+        {
+            margin: 0 -1px;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+
+            li 
+            {
+                display: inline-block;
+                margin-right: 50px;
+                list-style: inside none;
+
+                &:last-child 
+                {
+                    margin-right: 0;
+                }
+
+                a 
+                {
+                    color: $colorLinksMenu;
+                    display: block;
+                    font-weight: $fontWeightBold;
+                    padding-bottom: 5px;
+                    text-transform: uppercase;
+                    position: relative;
+                    transition: $transitionAll3s;
+
+                    &::after 
+                    {
+                        content: "";
+                        width: 0;
+                        height: 4px;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        margin-left: 0;
+                        transition: $transitionAll3s;
+                    }
+
+                    &:hover,
+                    &:focus 
+                    {
+                        color: $colorLinkHover;
+                        &::after 
+                        {
+                            background-color: $colorLinkHover;
+                            width: 46px;
+                            margin-left: -23px;
+                        }                        
+                    }
+
+                    &.ativo 
+                    {
+                        color: $colorLinkAtivo;
+                        &::after 
+                        {
+                            background-color: $colorLinkAtivo;
+                            width: 46px;
+                            margin-left: -23px;
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }

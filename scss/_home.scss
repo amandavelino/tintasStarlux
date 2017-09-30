@@ -1,0 +1,536 @@
+/* Sessões */
+
+    .ss-sessao
+    {
+        padding: 20px 0;
+    }
+
+    .hd-sessao
+    {
+        position: relative;
+        text-align: center;
+        padding: 20px 0;
+        margin: 40px 0 60px;
+
+        h1 
+        {
+            color: $colorHeaderProdutos;
+            font-size: $fontSizeBase * 4.8;
+            line-height: 1em;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        h2 
+        {
+            color: $colorTituloSessaoh2;
+            line-height: 1em;
+            margin: 0;
+            padding: 0;
+            text-transform: uppercase;
+        }        
+
+        &::after 
+        {
+            content: "";
+            background-color: $colorTituloSessaoh2;
+            border-top-left-radius: 5px;
+            border-bottom-right-radius: 5px;         
+            width: 90px;
+            height: 5px;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            margin-left: -45px;
+        }
+
+    }
+
+    .box-header
+    {
+        position: relative;
+        text-align: center;
+
+        .hd-sessao
+        {
+            margin-bottom: 30px;
+        }
+
+        p
+        {
+            color: $colorTituloSessaoh2;
+            font-size: $fontSizeBase * 1.5;
+            font-weight: $fontWeightBold;
+            margin: 10px 0;
+        } 
+    }
+
+    .ss-nossos-produtos 
+    {
+        .hd-sessao
+        {
+            &::after 
+            {
+                background-color: $colorHeaderProdutos;
+            } 
+        }       
+    }
+
+/* Produtos */
+
+    .lista-produtos
+    {
+        list-style: inside none;
+        padding: 0;
+
+        .item-produto 
+        {
+            @include make-lg-column(6);
+            height: 390px;
+            margin-bottom: 60px;
+        }
+
+        .ss-item
+        {
+            float: left;
+            width: 50%;
+            position: relative;
+        }
+
+        .produto-destaque 
+        {
+            border-right: 1px solid $borderProduto;
+            padding-right: 30px;
+
+            &::after 
+            {
+                content: "";
+                background: $borderProduto;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 35%;
+                height: 1px;
+            }            
+        }
+
+        .produto-descricao 
+        {
+            padding: 30px;
+            padding-right: 20px;
+            padding-bottom: 0;
+
+            &::before 
+            {
+                content: "";
+                background: $borderProduto;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 70%;
+                height: 1px;
+            }
+        }
+
+        .imagens-item
+        {
+            width: 100%;
+            position: relative;
+
+            img 
+            {
+                border: 2px solid $borderImage;
+            }
+        }
+
+        .imagem-destacada
+        {
+            position: absolute;
+            right: -5%;
+            top: 60%;
+
+            img 
+            {
+                border: 2px solid $borderImageDestacada;
+                border-radius: 100%;
+            }
+        } 
+        
+        figcaption 
+        {
+            padding: 60px 10px 30px;
+            text-align: center;
+            position: relative;
+
+            h4 
+            {
+                color: $colorh4Produtos;
+                margin: 0;
+                text-transform: uppercase;
+            }
+
+            &::after 
+            {
+                content: "";
+                background: #fff;
+                border: 1px solid $borderProduto;
+                border-radius: $borderRadius;
+                position: absolute;
+                bottom: -5px;
+                left: 70%;
+                z-index: 10;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+    }
+
+/* Cartela de Cores */
+
+    .ss-cartela-cores
+    {
+        background: url("../imgs/bg-cartela-de-cores.png") repeat 0 0;
+        padding: 0;
+        padding-bottom: 20px;
+
+        .lista-cores 
+        {
+            margin: 50px 0;
+            padding: 0;
+            overflow: hidden;
+            list-style: inside none;
+        }
+
+        .item-cartela 
+        {
+            @include make-lg-column(3);
+            border-left: 1px solid $borderWhite;
+            list-style: inside none;
+            text-align: center;
+            transition: $transitionAll5s;
+
+            &:first-child
+            {
+                border-left: 0 none;
+            }
+
+            a 
+            {
+                display: block;
+                padding: 40px 10px;
+                margin: 0 -15px;
+                height: 230px;
+            }
+
+            .svg-box 
+            {
+                padding-bottom: 15px;
+                path 
+                {
+                    transition: $transitionAll5s;
+                }
+            }
+
+            .legenda
+            {
+                h4
+                {
+                    color: $colorTituloSessaoh2;
+                    line-height: 1.5em;
+                    text-transform: uppercase;
+                    margin: 0;
+                    padding: 0;
+                    transition: $transitionAll3s;
+                }
+
+                p 
+                {
+                    color: $colorPLight;
+                    margin: 0;
+                }
+            }
+
+            &:hover 
+            {
+                background-color: $bgHoverCartela;
+                border-left-color: $bgHoverCartela;
+
+                & + .item-cartela
+                {
+                    border-left-color: $bgHoverCartela;
+                }
+
+                .legenda 
+                {
+                    h4 
+                    {
+                        color: $colorTituloSessaoh2Hover;
+                    }
+                }
+
+                svg 
+                {
+                    path 
+                    {
+                        fill: #fff;
+                    }
+                }
+            }
+
+        }
+    }
+
+/* Simulador de Cores */
+
+    .ss-simulador-cores
+    {
+        background: url("../imgs/bg-simulador.jpg") no-repeat center center;
+        background-size: cover;
+
+        .box-header 
+        {
+            padding: 170px 0 450px;
+        }
+
+        a 
+        {
+            h2, 
+            p,
+            .hd-sessao::after 
+            {
+                transition: $transitionAll5s;
+            }
+
+            &:hover 
+            {
+                h2
+                {
+                    color: $colorHoverH2Simulador;
+                }
+
+                .hd-sessao::after
+                {
+                    background-color: $colorHoverH2Simulador;
+                }
+
+                p 
+                {
+                    color: $colorHoverPSimulador;
+                }
+            }
+
+        }
+
+    }
+
+/* Dicas e Soluções */
+
+    .ss-dicas-solucoes 
+    {
+        background: url("../imgs/bg-dicas.jpg") no-repeat center center;
+        background-size: cover; 
+
+        .box-header 
+        {        
+            border: $borderWhite 13px solid;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            width: 600px;
+            margin: 180px auto;
+            overflow: hidden;
+            position: relative;
+
+            &::after
+            {
+                content: "";
+                opacity: 0;
+                background: rgba(2,40,60,1);
+                background: linear-gradient(45deg, rgba(2,40,60,1) 0%, rgba(14,76,109,1) 100%);  
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 0;
+                transition: $transitionAll3s; 
+            }            
+
+            &:hover 
+            {
+                &::after
+                {
+                    opacity: 1;
+                }                       
+            }
+
+            a 
+            {                 
+                display: block;
+                padding: 50px 30px 70px;
+                position: relative;
+                z-index: 10;
+            }    
+
+            .hd-sessao
+            {
+                margin-top: 0;
+            }
+
+            h3 
+            {
+                color: $colorWhite;
+                font-weight: $fontWeightNormal;
+                line-height: 1.5em;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        }        
+
+    }
+
+/* Nossa Empresa */
+
+    .ss-empresa
+    {
+        background: url("../imgs/bg-header-top.gif") repeat 0 0;
+        padding-bottom: 80px;
+        
+        .hd-sessao
+        {
+            &::after 
+            {
+                background-color: $borderTituloEmpresa;
+            }
+
+            h2 
+            {
+                color: $colorTituloEmpresa;
+            }
+        }
+
+        .ss-box-empresa 
+        {
+            @include make-lg-column(6);
+
+            img 
+            {
+                max-width: 100%;
+                border: $borderImgEmpresa 2px solid;
+            }
+
+            p 
+            {
+                color: $colorPEmpresa;
+            }
+            
+            .btn-conheca
+            {
+                background-color: $bgBtnConhecaEmpresa;
+                display: inline-block;
+                float: none;
+                width: auto;
+                padding-left: 50px;
+                padding-right: 50px;
+
+                &:hover 
+                {
+                    background-color: $bgBtnHoverConhecaEmpresa;
+                }
+            }
+        }
+
+    }
+
+/* Contato */
+
+    .ss-contato 
+    {
+        background-color: $bgContato;
+        padding: 0 0 40px;
+
+        .box-header 
+        {
+            padding-bottom: 20px;
+            p 
+            {
+                color: $colorFontBody;
+                font-weight: $fontWeightNormal;
+            }
+        }
+
+        .hd-sessao
+        {
+            &::after 
+            {
+                background-color: $colorContato;
+            }
+
+            h2 
+            {
+                color: $colorContato;
+            }
+        }
+
+        .formulario-contato
+        {
+            border: $borderForm 1px solid;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 25px;
+            overflow: hidden;
+            width: 740px;
+            margin: 0 auto;
+
+            .campo 
+            {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+    
+            .input 
+            {
+                background-color: $bgInput;
+                border: 2px solid transparent;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;   
+                color: $colorFontBody;             
+                padding: 8px 10px;
+                width: 100%;
+                outline: none;
+                transition: $transitionAll5s;
+
+                &:focus
+                {
+                    border-color: $borderInputHover;
+                }
+            }
+
+            .textarea 
+            {
+                min-height: 130px;
+                height: 130px;
+                max-height: 130px;
+            }
+
+            ::-webkit-input-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+            ::-moz-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+            :-ms-input-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+            :-moz-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+
+        }
+
+    }

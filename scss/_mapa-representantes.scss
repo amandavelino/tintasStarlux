@@ -1,0 +1,67 @@
+#svg-map
+{
+    path
+    { 
+        fill:#f98744;
+    }
+
+    text
+    { 
+        fill:#fff;
+        font: 11px "Arial-BoldMT", sans-serif;
+    }
+
+    .circle { fill:#ec6515; }
+    
+    a 
+    { 
+        
+        cursor: default;
+        text-decoration:none;
+
+        &.hasRepresentante
+        { 
+            cursor: pointer;
+            text 
+            {
+                cursor: pointer;
+            }
+
+            &:hover,
+            &:focus
+            {
+                text-decoration:none;
+    
+                path
+                { 
+                    fill:#0a793e !important;
+                }
+    
+                .circle
+                { 
+                    fill:#d85d13 !important;
+                    cursor:pointer;
+                }
+            }
+
+        }
+
+        &.selecionado
+        {
+
+            path
+            { 
+                fill:#0a793e !important;
+            }
+
+            .circle
+            { 
+                fill:#d85d13 !important;
+                cursor:pointer;
+            }
+                        
+        }
+
+    }
+
+}

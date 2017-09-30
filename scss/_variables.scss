@@ -1,0 +1,111 @@
+/* Background Colors */
+
+    //Redes Sociais Topo
+    $bgIcons: #d7d7d7;
+    $bgIconsHover: #b9d0d8;
+    //Topo
+    $bgColorHeader: #f3f3f3;
+    $bgColorHeaderBottom: #f9f9f9;
+    $bgBtnHeader: #0e4c6d;
+    $bgBtnHoverHeader: #ab310e;
+    //Cartela de Cores
+    $bgHoverCartela: #377292;
+    //Nossa Empresa
+    $bgBtnConhecaEmpresa: #00612d;
+    $bgBtnHoverConhecaEmpresa: #b44909;
+    //Contato
+    $bgContato: #eee;
+    $bgInput: #fafafa;
+    $bgBtnContato: #ec6515;
+    $bgBtnHoverContato: #00612d;
+
+    //Internas
+    $bgBorderInternas: #f98744;
+
+        //Produto
+        $bgBoxCartelaCores: #0e4c6d;
+        $bgBtnCartelaCores: #ec6515;
+
+    //Footer
+    $bgFooter: #68d098;
+
+/* Cores */
+
+    //Header
+    $colorBtnHeader: #f3f3f3;
+    $colorFontBody: #02283c;
+    //Menu
+    $colorLinksMenu: #393d3b;
+    $colorLinkAtivo: #ab310e;
+    $colorLinkHover: #f98744;
+    //Produtos
+    $colorHeaderProdutos: #f98744;
+    $colorh4Produtos: #ab310e;
+    //Geral
+    $colorTituloSessaoh2: #fff;
+    $colorPLight: #ddd; 
+    $colorTituloSessaoh2Hover: #02283c;
+    $colorWhite: #fff;
+    //Simulador de Cores
+    $colorHoverH2Simulador: #ec6515;
+    $colorHoverPSimulador: #f98744;    
+    //Nossa Empresa
+    $colorTituloEmpresa: #0a793e;
+    $colorPEmpresa: #00431f;
+    //Contato
+    $colorContato: #f98744;
+    $colorPlaceholder: #377292;
+
+    //Internas
+    $colorTituloInternas: #f98744;
+    $colorSubTituloInternas: #02283c;
+    
+        //Comentários
+        $colorComentarios: #b44909;
+        $colorQuotes: #ffbb93;
+        //Produto
+        $colorSpanBoxCartela: #e5704f;
+        $colorHoverBtnCartela: #0e4c6d;
+
+/* Border Cores */
+
+    //Header
+    $borderBottomHeader: #98b5c5;
+    $borderImage: #e5704f;
+    $borderImageDestacada: #ab310e;
+    $borderProduto: #949494;
+    $borderWhite: #fff;
+    //Empresa
+    $borderTituloEmpresa: #00612d;
+    $borderImgEmpresa: #179652;
+    //Contato
+    $borderContato: #f98744;
+    $borderForm: #bbb;
+    $borderInputHover: #ffa068;
+
+/* Fontes */  
+$primaryFont: 'Maven Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$fontSizeBase: 10px;
+$fontWeightNormal: 400;
+$fontWeightBold: 700;
+
+/* Especiais */
+$borderRadius: 100%;
+$transitionAll3s: all .3s ease-in-out;
+$transitionAll5s: all .5s ease-in-out;
+
+/* Media Queries */
+
+    //Desktops
+    $largeDesktop: 1200px; // > 1200px
+    $smallDesktop: 992px 1199px; // entre 1200px e 992px 
+    $allDesktop: 992px; // > 992px
+
+    //Tablets
+    $tablet: 768px 991px; //tablets portrait: 
+
+    //Celular
+    $celular: 768px;
+    $allCelular: 0 767px; // todos os dispositivos móveis < 768px
+    $largeCelular: 481 767px;
+    $smallCelular: 0 480px; 

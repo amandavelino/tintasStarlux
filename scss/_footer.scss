@@ -1,0 +1,50 @@
+/* Footer */
+
+    #up-footer
+    {
+        background: $bgContato url("../imgs/predios-rodape-bg.png") no-repeat center top; 
+        height: 245px;  
+    }
+
+    .page-internas
+    {
+        #up-footer 
+        {
+            background-color: transparent;
+        }
+    }
+
+    #ft-principal
+    {
+        background: $bgFooter url("../imgs/detalhe-footer.png") no-repeat 100% 0%;
+        padding: 25px 0 20px;
+
+        .container 
+        {
+            background: url("../imgs/icon-footer.png") no-repeat center left;
+            padding-left: 75px;
+            position: relative;
+        }
+
+        h5
+        {
+            margin: 0 0 5px 0;
+            padding: 0;
+            text-transform: uppercase;
+        }
+
+        p 
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+    }
+
+    #madeBy 
+    {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -30px;
+    }

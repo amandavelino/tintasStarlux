@@ -1,0 +1,391 @@
+/* Internas */
+
+    .ss-internas
+    {
+        padding-bottom: 120px;
+        
+        .hd-sessao 
+        {
+            margin: 60px 0 50px;
+
+            h2 
+            {
+                color: $colorTituloInternas;
+            }        
+
+            &::after 
+            {
+                background-color: $bgBorderInternas;
+            }
+            
+        }
+
+        .subtitulo
+        {
+            text-transform: uppercase;
+            text-align: center;
+            h3 
+            {
+                margin: 0;
+            }
+        }
+
+    }
+
+/* Produtos */
+
+    //Todos os Produtos
+
+    .page-produtos
+    {
+        
+        .lista-produtos
+        {
+            .item-produto 
+            {
+                @include make-lg-column(3);
+                margin-bottom: 20px;
+            }
+
+            .produto-destaque 
+            {
+                border-right: 0 none;
+                padding-right: 0;
+                width: 100%;
+                &::after 
+                {
+                    display: none;
+                }
+            }
+
+            .imagem-destacada 
+            {
+                right: 0;
+            }
+
+            figcaption
+            {
+                &::after
+                {
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+
+    //Single Produto
+
+    .ss-descricao-produto
+    {
+        .ss-imagem-produto
+        {
+            @include make-lg-column(3);
+            img 
+            {
+                border: $borderImageDestacada 2px solid;
+                border-radius: 100%;
+                max-width: 100%;
+                overflow: hidden;
+            }
+        }
+
+        .ss-descricao
+        {
+            @include make-lg-column(9);
+        }     
+        
+        .box-confira-cartela
+        {
+            background-color: $bgBoxCartelaCores;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;    
+            overflow: hidden;
+            width: 100%;
+            padding: 15px 30px;
+            margin: 40px 0;
+            
+            h3 
+            {
+                color: $colorWhite;
+                display: inline-block;
+                text-transform: uppercase;
+                margin: 0;
+                span 
+                {
+                    color: $colorSpanBoxCartela;
+                }
+            }
+
+        }
+    }
+
+    .ss-listagem-produtos
+    {
+        float: left;
+        width: 100%;
+
+        .hd-sessao 
+        {
+            padding-bottom: 10px;
+
+            h3
+            {
+                color: #0a793c;
+                text-transform: uppercase;
+                margin: 0;
+            }
+
+            &::after 
+            {
+                background-color: #00612d;
+            }
+        }
+
+        ul
+        {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+
+            li
+            {
+                @include make-lg-column(3);
+                height: 75px;
+                margin-bottom: 30px;
+                list-style: none;
+
+                figure 
+                {
+                    height: 100%;
+                }
+
+                .box-img 
+                {
+                    border: 2px solid $borderImageDestacada;
+                    border-radius: 100%;
+                    float: left; 
+                    margin-right: 20px; 
+                    position: relative;
+                    overflow: hidden;
+
+                    &::before 
+                    {
+                        content: "\f067";
+                        color: #fff;
+                        font-family: FontAwesome; 
+                        font-size: $fontSizeBase * 4;
+                        font-weight: normal;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -12px;
+                        margin-left: -16px;
+                        z-index: 20;
+                        opacity: 0;
+                        transition: $transitionAll5s;
+                    }
+
+                    &::after
+                    {
+                        content: "";
+                        background-color: rgba(171,49,14,.5);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 10; 
+                        opacity: 0;
+                        transition: $transitionAll5s;    
+                    }
+
+                }
+
+                a 
+                {               
+
+                    display: block;
+                    height: 100%;
+
+                    figcaption
+                    {
+                        height: 100%;
+                        position: relative;
+                        display: table;
+                    }
+
+                    h5 
+                    {
+                        color: #ab310e;
+                        text-transform: uppercase;
+                        margin: 0;
+                        height: 100%;
+                        transition: $transitionAll3s;
+
+                        //Alinhamento Vertical
+                        display: table-cell;
+                        vertical-align: middle;                        
+                    }                    
+
+                    &:hover 
+                    {
+                        .box-img
+                        {
+                            &::before,
+                            &::after
+                            {
+                                opacity: 1;
+                            }
+                        }
+
+                        h5 
+                        {
+                            color: #0e4c6d;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+/* Tabela de Cores */
+
+    .page-tabela-cores
+    {
+        .lista-cores 
+        {
+            margin: 40px -15px 30px;
+            padding: 0;
+            overflow: hidden;
+
+            li 
+            {
+                float: left;
+                width: 12.5%;
+                height: 110px;
+                list-style: none;
+                margin-bottom: 30px;
+                padding: 0 15px;
+                text-align: center;
+
+                .box-cor 
+                {
+                    border: 1px solid #bbb;
+                    border-top-left-radius: 20px;
+                    border-bottom-right-radius: 20px;  
+                    margin-bottom: 10px;    
+                    width: 100%;
+                    height: 60px;       
+                }
+
+                p 
+                {
+                    text-transform: uppercase;
+                    margin: 0;
+                }
+
+            }
+
+        }
+    }
+
+/* Representantes */
+
+    .page-representantes
+    {
+
+        .box-loader
+        {
+            text-align: center;
+            width: 340px;
+
+            img 
+            {
+                margin: 0 auto;
+            }
+        }
+
+        .box-representante
+        {
+            @include make-lg-column(6);
+
+            .subtitulo
+            {
+                text-align: left;
+                margin-bottom: 40px;
+            }
+        }
+
+        .box-representantes
+        {
+            overflow: hidden;
+            //margin: 30px 0;
+        }
+
+    
+        .box-estado
+        {
+            display: none;
+
+            &.mostrarEstado
+            {
+                display: block;
+            }       
+        
+        }
+
+        .estado
+        {
+            text-transform: uppercase;
+            padding: 0 0 40px;
+            h3 
+            {
+                margin: 0;
+            }
+        } 
+
+        .lista-representantes 
+        {
+
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+
+            li 
+            {
+                list-style: none;
+                position: relative;
+                padding-bottom: 30px;
+                margin-bottom: 30px;
+
+                &::before 
+                {
+                    content: "";
+                    background-color: #bbb;
+                    width: 50%;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+
+            h4 
+            {
+                color: #0a793e;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+            }
+
+            p 
+            {
+                margin: 0;
+            }
+
+        }
+
+    }

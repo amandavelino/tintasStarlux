@@ -1,0 +1,191 @@
+body 
+{
+    color: $colorFontBody;
+    font-family: $primaryFont;
+    font-size: $fontSizeBase * 1.6;
+    font-weight: $fontWeightNormal;
+    line-height: 1.5em;
+
+    &.page-internas
+    {
+        background: url("../imgs/bg-internas.png") no-repeat center center;
+    }
+}
+
+/* Títulos e textos */
+
+    h1 
+    {
+        font-size: $fontSizeBase * 4.8;
+        margin: 0 0 25px;
+    }
+
+    h2 
+    {
+        font-size: $fontSizeBase * 4;
+        margin: 0 0 20px;
+    }
+
+    h3 
+    {
+        font-size: $fontSizeBase * 3.2;
+        margin: 0 0 20px;
+    }
+
+    h4 
+    {
+        font-size: $fontSizeBase * 2.4;
+        margin: 0 0 15px;
+    }
+
+    h5 
+    {
+        font-size: $fontSizeBase * 1.6;
+        margin: 0 0 15px;
+    }
+
+    h1, h2, h3, h4, h5
+    {
+        font-weight: $fontWeightBold;
+        line-height: 1.3em;
+    }
+
+    h6 
+    {
+        font-size: $fontSizeBase * 1.6;
+        font-weight: $fontWeightNormal;
+        margin: 0 0 15px;
+        line-height: 1.3em;
+    }
+
+    p  
+    {
+        color: $colorFontBody;
+        margin: 0 0 20px;   
+        line-height: 1.4em;   
+    }
+
+    a,
+    a:hover,
+    a:focus,
+    a:visited 
+    {
+        outline: none;
+        text-decoration: none;
+    }
+
+    img 
+    {
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        display: inline-block; 
+        margin-bottom: 0; 
+    }
+
+    blockquote
+    {
+        color: $colorComentarios;
+        text-align: center;
+        margin: 0 20px 30px;
+        padding: 30px 0;
+        position: relative;
+
+        &::before 
+        {
+            font-family: FontAwesome;
+            content: "\f10d";
+            color: $colorQuotes;
+            font-size: $fontSizeBase * 5;
+            line-height: 1.2em;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            z-index: 0;
+            margin-left: -23px;
+        }
+
+        &::after 
+        {
+            content: "";
+            background-color: $bgBorderInternas;
+            width: 250px;
+            height: 1px;
+            margin: 0 auto;
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            margin-left: -125px;
+        }
+
+        p 
+        {
+            color: $colorComentarios;
+            font-size: $fontSizeBase * 2.4;
+            line-height: 1.25em;
+            position: relative;
+        }
+
+    }
+
+/* Classes */
+
+    .ss-row 
+    {
+        @include make-row();
+    }
+
+    .btn 
+    {
+        background: $bgBtnHeader;
+        border: 0 none;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 8px; 
+        color: $colorBtnHeader;
+        font-size: $fontSizeBase * 1.6;
+        font-weight: $fontWeightBold;
+        float: right;
+        padding: 10px 30px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        outline: none;
+        transition: $transitionAll5s;
+
+        &:hover,
+        &:focus 
+        {
+            background: $bgBtnHoverHeader;
+            color: #fff;
+        }
+
+        &.btn-conheca 
+        {
+            display: block;
+            margin: 10px 0;
+        }
+
+        &.btn-enviar
+        {
+            background-color: $bgBtnContato;
+            &:hover,
+            &:focus  
+            {
+                background-color: $bgBtnHoverContato;
+            }
+        }   
+    
+        &.btn-cartela
+        {
+            background-color: $bgBtnCartelaCores;
+            float: right;
+            padding: 10px 50px;
+            width: auto;
+            &:hover,
+            &:focus 
+            {
+                background-color: $colorWhite;
+                color: $colorHoverBtnCartela;
+            }
+        }
+
+    }
