@@ -1,4 +1,4 @@
-<section class="ss-sessao ss-contato">
+<section class="ss-sessao ss-formulario form-contato">
 
     <div class="container">
 

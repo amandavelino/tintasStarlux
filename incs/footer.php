@@ -1,4 +1,4 @@
-    <div id="up-footer" <?php if($pagina != "/index.php"): ?>class="ft-internas"<?php endif; ?>></div>
+    <div id="up-footer" <?php if($pagina != "/index.php" && $pagina != "/representantes.php"): ?>class="no-bg"<?php endif; ?>></div>
     <footer id="ft-principal">
 
         <div class="container">

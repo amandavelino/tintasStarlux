@@ -6,9 +6,34 @@ body
     font-weight: $fontWeightNormal;
     line-height: 1.5em;
 
+    main 
+    {
+        a
+        {
+            color: #0a793e;
+        }
+    
+        a:focus,
+        a:visited 
+        {
+            outline: none;
+            text-decoration: none;
+        }
+    
+        a:hover
+        {
+            color: #0a793e;
+            outline: none;
+            text-decoration: underline;
+        }        
+    }
+
     &.page-internas
     {
-        background: url("../imgs/bg-internas.png") no-repeat center center;
+        main 
+        {
+            background: url("../imgs/bg-internas.png") no-repeat top center;
+        }
     }
 }
 
@@ -65,21 +90,18 @@ body
         line-height: 1.4em;   
     }
 
-    a,
-    a:hover,
-    a:focus,
-    a:visited 
-    {
-        outline: none;
-        text-decoration: none;
-    }
-
     img 
     {
         border-top-left-radius: 30px;
         border-bottom-right-radius: 30px;
         display: inline-block; 
         margin-bottom: 0; 
+
+        &.no-radius
+        {
+            border-radius: 0;
+        }
+
     }
 
     blockquote
@@ -156,6 +178,7 @@ body
         {
             background: $bgBtnHoverHeader;
             color: #fff;
+            text-decoration: none;
         }
 
         &.btn-conheca 
@@ -188,4 +211,199 @@ body
             }
         }
 
+    }
+
+/* Contato */
+
+    .ss-formulario 
+    {
+        background-color: $bgContato;
+        padding: 0 0 40px;
+
+        .box-header 
+        {
+            padding-bottom: 20px;
+            p 
+            {
+                color: $colorFontBody;
+                font-weight: $fontWeightNormal;
+            }
+        }
+
+        .hd-sessao
+        {
+            &::after 
+            {
+                background-color: $colorContato;
+            }
+
+            h2 
+            {
+                color: $colorContato;
+            }
+        }
+
+        .formulario-contato
+        {
+            border: $borderForm 1px solid;
+            border-top-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            padding: 25px;
+            overflow: hidden;
+            width: 740px;
+            margin: 0 auto;
+
+            .campo 
+            {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .input 
+            {
+                background-color: $bgInput;
+                border: 2px solid transparent;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;   
+                color: $colorFontBody;             
+                padding: 8px 10px;
+                width: 100%;
+                outline: none;
+                transition: $transitionAll5s;
+
+                &:focus
+                {
+                    border-color: $borderInputHover;
+                }
+            }
+
+            .textarea 
+            {
+                min-height: 130px;
+                height: 130px;
+                max-height: 130px;
+            }
+
+            ::-webkit-input-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+            ::-moz-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+            :-ms-input-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+            :-moz-placeholder
+            { 
+                color: $colorPlaceholder;
+            }
+
+        }
+
+        &.form-representantes
+        {
+            margin-top: 50px;
+
+            .hd-sessao
+            {
+                &::after 
+                {
+                    background-color: #0e4c6d;
+                }
+        
+                h2 
+                {
+                    color: #0e4c6d;
+                }
+            }
+
+            .btn-enviar 
+            {
+                background-color: #0e4c6d;
+
+                &:hover,
+                &:focus  
+                {
+                    background-color: $bgBtnHoverContato;
+                }
+            }
+
+            .input
+            {
+                &:focus
+                {
+                    border-color: #1b6187;
+                }            
+            }
+
+            ::-webkit-input-placeholder
+            { 
+                color: #00612d;
+            }
+            ::-moz-placeholder
+            { 
+                color: #00612d;
+            }
+            :-ms-input-placeholder
+            { 
+                color: #00612d;
+            }
+            :-moz-placeholder
+            { 
+                color: #00612d;
+            }
+
+        }
+
+    }
+
+/* Paginação */
+
+    .box-paginacao
+    {
+        text-align: center;
+        
+        .paginacao
+        {
+            display: inline-block;
+            overflow: hidden;
+
+            li 
+            {
+                float: left;
+                margin-right: 15px;
+                border-top-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                overflow: hidden;
+                width: 30px;
+                height: 30px;
+
+                a 
+                {
+                    background-color: #f98744;
+                    color: #fff;
+                    display: block;
+                    font-weight: $fontWeightBold;
+                    padding: 3px 5px;
+                    transition: $transitionAll5s;
+
+                    &:hover,
+                    &:focus 
+                    {
+                        background-color: #ec6515;
+                        text-decoration: none;
+                    }
+
+                    &.ativa
+                    {
+                        background-color: #ab310e;
+                    }
+                }
+            }
+
+        }
+ 
     }

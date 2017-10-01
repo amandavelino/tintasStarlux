@@ -222,6 +222,12 @@
                 padding: 40px 10px;
                 margin: 0 -15px;
                 height: 230px;
+
+                &:hover,
+                &:focus
+                {
+                    text-decoration: none;
+                }
             }
 
             .svg-box 
@@ -305,6 +311,8 @@
 
             &:hover 
             {
+                text-decoration: none;
+
                 h2
                 {
                     color: $colorHoverH2Simulador;
@@ -371,6 +379,12 @@
                 padding: 50px 30px 70px;
                 position: relative;
                 z-index: 10;
+
+                &:hover,
+                &:focus
+                {
+                    text-decoration: none;
+                }
             }    
 
             .hd-sessao
@@ -443,94 +457,3 @@
 
     }
 
-/* Contato */
-
-    .ss-contato 
-    {
-        background-color: $bgContato;
-        padding: 0 0 40px;
-
-        .box-header 
-        {
-            padding-bottom: 20px;
-            p 
-            {
-                color: $colorFontBody;
-                font-weight: $fontWeightNormal;
-            }
-        }
-
-        .hd-sessao
-        {
-            &::after 
-            {
-                background-color: $colorContato;
-            }
-
-            h2 
-            {
-                color: $colorContato;
-            }
-        }
-
-        .formulario-contato
-        {
-            border: $borderForm 1px solid;
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            padding: 25px;
-            overflow: hidden;
-            width: 740px;
-            margin: 0 auto;
-
-            .campo 
-            {
-                width: 100%;
-                margin-bottom: 15px;
-            }
-    
-            .input 
-            {
-                background-color: $bgInput;
-                border: 2px solid transparent;
-                border-top-left-radius: 10px;
-                border-bottom-right-radius: 10px;   
-                color: $colorFontBody;             
-                padding: 8px 10px;
-                width: 100%;
-                outline: none;
-                transition: $transitionAll5s;
-
-                &:focus
-                {
-                    border-color: $borderInputHover;
-                }
-            }
-
-            .textarea 
-            {
-                min-height: 130px;
-                height: 130px;
-                max-height: 130px;
-            }
-
-            ::-webkit-input-placeholder
-            { 
-                color: $colorPlaceholder;
-            }
-            ::-moz-placeholder
-            { 
-                color: $colorPlaceholder;
-            }
-            :-ms-input-placeholder
-            { 
-                color: $colorPlaceholder;
-            }
-            :-moz-placeholder
-            { 
-                color: $colorPlaceholder;
-            }
-
-        }
-
-    }

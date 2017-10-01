@@ -459,6 +459,48 @@
     </div>
     <!-- end .container -->
 
+    <section class="ss-sessao ss-formulario form-representantes">
+
+        <div class="container">
+
+            <div class="box-header">
+                <header class="hd-sessao">
+                    <h2>Seja um representante Starlux</h2>
+                </header>   
+                <p>Preencha os dados no formulário abaixo e responderemos em até 1 dia útil.</p>           
+            </div>
+            <!-- end .box-header -->
+
+            <form action="#" class="formulario-contato" autocomplete="off">
+
+                <fieldset>
+                    <div class="campo">
+                        <input type="text" class="input" placeholder="Digite seu nome*">
+                    </div>
+                    <!-- campo -->
+                    <div class="campo">
+                        <input type="email" class="input" placeholder="Digite seu e-mail*">
+                    </div>
+                    <!-- campo -->   
+                    <div class="campo">
+                        <input type="tel" class="input" placeholder="Telefone para contato*">
+                    </div>
+                    <!-- campo -->  
+                    <div class="campo">
+                        <input type="tel" class="input" placeholder="Cidade/UF*">
+                    </div>
+                    <!-- campo -->                   
+                </fieldset>
+
+                <input type="submit" class="btn btn-enviar" value=" Enviar Mensagem ">
+
+            </form>
+
+        </div>
+        <!-- end .container -->
+
+    </section>
+
 </main>
 <!-- end .internas -->
 

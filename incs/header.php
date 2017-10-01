@@ -63,9 +63,9 @@
                             <li><a href="sobre.php" class="ativo">Sobre a starlux</a></li>
                             <li><a href="produtos.php">Produtos</a></li>
                             <li><a href="tabela-de-cores.php">Tabela de cores</a></li>
-                            <li><a href="#">Simulador de cores</a></li>
-                            <li><a href="#">Dicas e soluções</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="simulador-cores.php">Simulador de cores</a></li>
+                            <li><a href="dicas-solucoes.php">Dicas e soluções</a></li>
+                            <li><a href="contato.php">Contato</a></li>
                         </ul>
 
                     </nav>
