@@ -23,7 +23,8 @@
                 <div class="container">
 
                     <div class="ss-row">
-                        <div class="ss-header">
+
+                        <div class="ss-header area-redes">
                             <ul class="redes-sociais">
                                 <li class="icon-face"><a href="#" target="_blank"><img src="imgs/icon-facebook.png" alt="Facebook"></a></li>
                                 <li class="icon-instagram"><a href="#" target="_blank"><img src="imgs/icon-instagram.png" alt="Instagram"></a></li>
@@ -34,17 +35,29 @@
                         <!-- end .ss-header -->
 
                         <div class="ss-header">
+
                             <a href="index.php" class="icon-logo">
                                 <img src="imgs/logo-tintas-starlux.svg" onerror="this.onerror=null;this.src='imgs/logo-tintas-starlux.png';" width="270" border="0">
                             </a>
+
+                            <div id="icon-mobile">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </div>
+                            <!-- end .icon-mobile -->
+
                         </div>
                         <!-- end .ss-header -->
 
-                        <div class="ss-header">
+                        <div class="ss-header area-rep">
                             <a href="representantes.php" class="btn btn-no-refresh btn-header">Área do representante</a>
                         </div>
                         <!-- end .ss-header -->  
-                    </div>              
+
+                    </div> 
+                    <!-- end .ss-row -->             
 
                 </div>
                 <!-- end .container -->
@@ -56,17 +69,66 @@
 
                 <div class="container">
 
-                    <nav class="menu">
+                    <nav>
 
-                        <ul>
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="sobre.php" class="ativo">Sobre a starlux</a></li>
-                            <li><a href="produtos.php">Produtos</a></li>
-                            <li><a href="tabela-de-cores.php">Tabela de cores</a></li>
-                            <li><a href="simulador-cores.php">Simulador de cores</a></li>
-                            <li><a href="dicas-solucoes.php">Dicas e soluções</a></li>
-                            <li><a href="contato.php">Contato</a></li>
-                        </ul>
+                        <div class="menu">
+
+                            <ul id="menu-principal">
+                                <li><a href="index.php" class="ativo">Home</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="sobre.php">Sobre a starlux</a>
+                                    <ul class="sub-menu">
+                                        <li class="menu-item-has-children">
+                                            <a href="#">Quem Somos</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="#">Vídeo Institucional</a></li>
+                                                <li><a href="#">Diretoria</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">História</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="produtos.php">Produtos</a></li>
+                                <li><a href="tabela-de-cores.php">Tabela de cores</a></li>
+                                <li><a href="simulador-cores.php">Simulador de cores</a></li>
+                                <li><a href="dicas-solucoes.php">Dicas e soluções</a></li>
+                                <li><a href="contato.php">Contato</a></li>
+                            </ul>
+
+                        </div>
+                        <!-- .menu -->
+
+                        <div class="menu-mobile">
+
+                            <span id="close">
+                                <img src="./imgs/close.svg">
+                            </span>
+
+                            <ul>
+                                <li><a href="index.php" class="ativo">Home</a></li>
+                                <li class="hasSubmenu">
+                                    <a href="sobre.php">Sobre a starlux</a>
+                                    <ul class="submenu">
+                                        <li class="hasMenuSub">
+                                            <a href="#">Quem Somos</a>
+                                            <ul class="menu-submenu">
+                                                <li><a href="#">Vídeo Institucional</a></li>
+                                                <li><a href="#">Diretoria</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">História</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="produtos.php">Produtos</a></li>
+                                <li><a href="tabela-de-cores.php">Tabela de cores</a></li>
+                                <li><a href="simulador-cores.php">Simulador de cores</a></li>
+                                <li><a href="dicas-solucoes.php">Dicas e soluções</a></li>
+                                <li><a href="contato.php">Contato</a></li>
+                                <li><a href="representantes.php">Área do Representante</a></li>
+                            </ul>
+
+                        </div>
+                        <!-- .menu-mobile -->
 
                     </nav>
                     <!-- end .menu -->

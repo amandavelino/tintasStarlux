@@ -3,7 +3,7 @@
     <div class="container">
 
         <div class="box-header">
-            <a href="#">
+            <a href="simulador-cores.php">
                 <header class="hd-sessao">
                     <h2>Simulador de Cores</h2>
                 </header>   

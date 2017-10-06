@@ -12,6 +12,7 @@
             <h3>Esmalte Sintético</h3>
         </div>
         
+        <p>&nbsp;</p>
         <p>Toda a variedade de cores Standard e Especiais.</p>
 
         <ul class="lista-cores">

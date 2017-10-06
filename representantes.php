@@ -24,6 +24,31 @@
                 </div>
                 <!-- info-box-estado -->
 
+                <div id="info-box-mobile">
+                        
+                    <div class="box-select">
+                        <select id="selectEstadosRepresentantes" class="form-control">
+                            <option value="pernambuco">Pernambuco</option>
+                            <option value="paraiba">Paraíba</option>
+                        </select>
+                    </div>
+                    <!-- end .form-group -->
+
+                </div>
+                <!-- box-representante-estado -->
+
+                <div class="info-box-estado-mobile">
+
+                    <div class="subtitulo">
+                        <h3>Selecione um estado</h3>
+                    </div>
+                    
+                    <p>Selecione o Estado e veja a lista de representantes e regiões atendidas por ele.<br>
+                    Deseja vender os produtos Starlux em sua região? Utilize o formulário abaixo e entraremos em contato.</p>
+
+                </div>
+                <!-- info-box-estado -->
+
                 <div class="box-representantes">
 
                     <div id="paraiba" class="box-estado">

@@ -18,13 +18,13 @@
                 <ul class="lista-simuladores">
 
                     <li>
-                        <a href="#">
+                        <a href="simulador-single.php">
                             <figure>
                                 <img src="imgs/simuladores-cores/starlutex-quarto.jpg" alt="Starlutex - Quarto" border="0">
-                                <figcaption>
-                                    <h4>Quarto</h4>
-                                </figcaption>
                             </figure>
+                            <figcaption>
+                                <h4>Quarto</h4>
+                            </figcaption>                            
                         </a>
                     </li>
 
@@ -32,10 +32,10 @@
                         <a href="#">
                             <figure>
                                 <img src="imgs/simuladores-cores/starlutex-fachada.jpg" alt="Starlutex - Fachada" border="0">
-                                <figcaption>
-                                    <h4>Fachada</h4>
-                                </figcaption>
                             </figure>
+                            <figcaption>
+                                <h4>Fachada</h4>
+                            </figcaption>                            
                         </a>
                     </li>    
                     
@@ -43,10 +43,10 @@
                         <a href="#">
                             <figure>
                                 <img src="imgs/simuladores-cores/starlutex-sala.jpg" alt="Starlutex - Sala" border="0">
-                                <figcaption>
-                                    <h4>Sala</h4>
-                                </figcaption>
                             </figure>
+                            <figcaption>
+                                <h4>Sala</h4>
+                            </figcaption>                            
                         </a>
                     </li> 
                     
@@ -54,10 +54,10 @@
                         <a href="#">
                             <figure>
                                 <img src="imgs/simuladores-cores/starlutex-cozinha.jpg" alt="Starlutex - Cozinha" border="0">
-                                <figcaption>
-                                    <h4>Cozinha</h4>
-                                </figcaption>
                             </figure>
+                            <figcaption>
+                                <h4>Cozinha</h4>
+                            </figcaption>                            
                         </a>
                     </li>                 
 

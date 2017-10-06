@@ -15,7 +15,6 @@
         h1 
         {
             color: $colorHeaderProdutos;
-            font-size: $fontSizeBase * 4.8;
             line-height: 1em;
             margin: 0;
             padding: 0;
@@ -86,9 +85,39 @@
 
         .item-produto 
         {
+            @include make-md-column(6);
             @include make-lg-column(6);
+
             height: 390px;
             margin-bottom: 60px;
+            overflow: hidden;
+
+            @include breakpoint($tablet)
+            {
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint($largeCelular)
+            {
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint($smallCelular)
+            {
+                margin-bottom: 40px;
+                height: auto;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 30px;
+            }
+
+            &:last-child
+            {
+                @include breakpoint($smallCelular)
+                {
+                    border: 0 none;
+                }
+            }
+
         }
 
         .ss-item
@@ -103,6 +132,32 @@
             border-right: 1px solid $borderProduto;
             padding-right: 30px;
 
+            @include breakpoint($tablet)
+            {
+                width: 42%;
+            } 
+
+            @include breakpoint($largeCelular)
+            {
+                width: 42%;
+            }             
+
+            @include breakpoint($smallCelular)
+            {
+                border: 0 none;
+                width: 100%;
+                padding: 0;
+            }     
+
+            figure 
+            {
+                @include breakpoint($smallCelular)
+                {
+                    width: 240px;
+                    margin: 0 auto;
+                }                  
+            }
+
             &::after 
             {
                 content: "";
@@ -112,6 +167,12 @@
                 bottom: 0;
                 width: 35%;
                 height: 1px;
+
+                @include breakpoint($smallCelular)
+                {
+                    display: none;
+                }
+
             }            
         }
 
@@ -120,6 +181,27 @@
             padding: 30px;
             padding-right: 20px;
             padding-bottom: 0;
+
+            @include breakpoint($smallDesktop)
+            {
+                padding: 20px;
+            } 
+
+            @include breakpoint($tablet)
+            {
+                width: 58%;
+            }             
+
+            @include breakpoint($largeCelular)
+            {
+                width: 58%;
+            }
+
+            @include breakpoint($smallCelular)
+            {
+                width: 100%;
+                padding: 0;
+            }            
 
             &::before 
             {
@@ -130,6 +212,12 @@
                 top: 0;
                 width: 70%;
                 height: 1px;
+
+                @include breakpoint($smallCelular)
+                {
+                    display: none;
+                }
+
             }
         }
 
@@ -141,6 +229,7 @@
             img 
             {
                 border: 2px solid $borderImage;
+                max-width: 100%;
             }
         }
 
@@ -150,10 +239,17 @@
             right: -5%;
             top: 60%;
 
+            @include breakpoint($smallCelular)
+            {
+                width: 100px;
+                right: -15px;
+            }
+
             img 
             {
                 border: 2px solid $borderImageDestacada;
                 border-radius: 100%;
+                max-width: 100%;
             }
         } 
         
@@ -182,6 +278,12 @@
                 z-index: 10;
                 width: 10px;
                 height: 10px;
+
+                @include breakpoint($smallCelular)
+                {
+                    display: none;
+                }
+
             }
         }
 
@@ -205,11 +307,29 @@
 
         .item-cartela 
         {
+            @include make-sm-column(3);
+            @include make-md-column(3);
             @include make-lg-column(3);
+
             border-left: 1px solid $borderWhite;
             list-style: inside none;
             text-align: center;
             transition: $transitionAll5s;
+
+            @include breakpoint($largeCelular)
+            {
+                border: 0 none;
+                //border-left: 1px solid $borderWhite;
+                float: left;
+                width: 50%;
+            }
+
+            @include breakpoint($smallCelular)
+            {
+                border: 0 none;
+                //border-bottom: 1px solid $borderWhite;
+                width: 100%;
+            }            
 
             &:first-child
             {
@@ -298,6 +418,22 @@
         .box-header 
         {
             padding: 170px 0 450px;
+            
+            @include breakpoint($smallDesktop)
+            {
+                padding: 140px 0 370px;
+            }
+
+            @include breakpoint($tablet)
+            {
+                padding: 80px 0 300px;
+            }
+
+            @include breakpoint($allCelular)
+            {
+                padding: 60px 0 250px;
+            }
+
         }
 
         a 
@@ -346,9 +482,33 @@
             border-top-left-radius: 30px;
             border-bottom-right-radius: 30px;
             width: 600px;
+            max-width: 100%;
             margin: 180px auto;
             overflow: hidden;
             position: relative;
+            
+            @include breakpoint($smallDesktop)
+            {
+                border-width: 8px;
+            }
+
+            @include breakpoint($tablet)
+            {
+                border-width: 6px;
+            }            
+            
+            @include breakpoint($largeCelular)
+            {
+                border-width: 6px;
+                margin: 80px auto;
+                max-width: 90%;
+            }
+
+            @include breakpoint($smallCelular)
+            {
+                border-width: 6px;
+                margin: 80px auto;
+            }
 
             &::after
             {
@@ -380,6 +540,16 @@
                 position: relative;
                 z-index: 10;
 
+                @include breakpoint($largeCelular)
+                {
+                    padding: 50px 20px 70px;
+                }
+
+                @include breakpoint($largeCelular)
+                {
+                    padding: 50px 10px 70px;
+                }
+
                 &:hover,
                 &:focus
                 {
@@ -399,6 +569,11 @@
                 line-height: 1.5em;
                 text-transform: uppercase;
                 margin: 0;
+
+                @include breakpoint($smallDesktop)
+                {
+                    line-height: 1.3em;
+                }
             }
         }        
 
@@ -411,6 +586,11 @@
         background: url("../imgs/bg-header-top.gif") repeat 0 0;
         padding-bottom: 80px;
         
+        @include breakpoint($allCelular)
+        {
+            padding-bottom: 40px;
+        }
+
         .hd-sessao
         {
             &::after 
@@ -426,7 +606,22 @@
 
         .ss-box-empresa 
         {
+            @include make-sm-column(6);
+            @include make-md-column(6);
             @include make-lg-column(6);
+
+            @include breakpoint($allCelular)
+            {
+                margin-bottom: 30px;
+            }
+
+            &.ss-empresa-img 
+            {
+                @include breakpoint($allCelular)
+                {
+                    text-align: center;
+                }
+            }
 
             img 
             {
@@ -447,6 +642,14 @@
                 width: auto;
                 padding-left: 50px;
                 padding-right: 50px;
+
+                @include breakpoint($allCelular)
+                {
+                    margin: 0 auto;
+                    display: block;
+                    width: 220px;
+                    max-width: 100%;
+                }
 
                 &:hover 
                 {

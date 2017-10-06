@@ -5,6 +5,42 @@ body
     font-size: $fontSizeBase * 1.6;
     font-weight: $fontWeightNormal;
     line-height: 1.5em;
+    position: relative;
+
+    @include breakpoint($tablet)
+    {
+        margin-top: 170px;          
+    } 
+    
+    @include breakpoint($allCelular)
+    {
+        margin-top: 170px;
+    }  
+
+    &.menu-ativo
+    {
+        overflow: hidden; 
+    }
+
+    .bg-fade 
+    {
+        content: "";
+        display: block;
+        background-color: #111;
+        background-color: rgba(0,0,0,.8);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 80;
+        opacity: 0;    
+
+        @include breakpoint(min-width $allDesktop)
+        {
+            display: none;
+        }
+    }
 
     main 
     {
@@ -33,6 +69,16 @@ body
         main 
         {
             background: url("../imgs/bg-internas.png") no-repeat top center;
+
+            @include breakpoint($tablet)
+            {
+                padding-bottom: 80px;
+            }
+
+            @include breakpoint($allCelular)
+            {
+                padding-bottom: 0;
+            }            
         }
     }
 }
@@ -43,36 +89,110 @@ body
     {
         font-size: $fontSizeBase * 4.8;
         margin: 0 0 25px;
+        
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 3.8;
+        }
+
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 3.8;
+        } 
+        
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 3;
+        }         
     }
 
     h2 
     {
         font-size: $fontSizeBase * 4;
         margin: 0 0 20px;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 3.5;
+        }    
+        
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 3.5;
+        }  
+        
+        @include breakpoint($largeCelular)
+        {
+            font-size: $fontSizeBase * 3;
+        }  
+        
+        @include breakpoint($smallCelular)
+        {
+            font-size: $fontSizeBase * 2.8;
+        }          
     }
 
     h3 
     {
         font-size: $fontSizeBase * 3.2;
         margin: 0 0 20px;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 2.5;
+        }        
+
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 2.5;
+        }  
+        
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 2.3;
+        }          
     }
 
     h4 
     {
         font-size: $fontSizeBase * 2.4;
         margin: 0 0 15px;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 2;
+        }  
+        
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 2;
+        } 
+        
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 1.8;
+        }         
     }
 
     h5 
     {
         font-size: $fontSizeBase * 1.6;
         margin: 0 0 15px;
-    }
-
-    h1, h2, h3, h4, h5
-    {
-        font-weight: $fontWeightBold;
-        line-height: 1.3em;
+        
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 1.4;
+        }  
+        
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 1.4;
+        }  
+        
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 1.4;
+        }          
     }
 
     h6 
@@ -81,13 +201,41 @@ body
         font-weight: $fontWeightNormal;
         margin: 0 0 15px;
         line-height: 1.3em;
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 1.4;
+        }        
+
+        @include breakpoint($tablet)
+        {
+            font-size: $fontSizeBase * 1.4;
+        } 
+        
+        @include breakpoint($allCelular)
+        {
+            font-size: $fontSizeBase * 1.4;
+        }         
+    }
+
+    h1, h2, h3, h4, h5
+    {
+        font-weight: $fontWeightBold;
+        line-height: 1.3em;
     }
 
     p  
     {
         color: $colorFontBody;
         margin: 0 0 20px;   
-        line-height: 1.4em;   
+        line-height: 1.4em; 
+
+        @include breakpoint($smallDesktop)
+        {
+            font-size: $fontSizeBase * 1.5;
+            line-height: 1.3em; 
+        }  
+    
     }
 
     img 
@@ -96,6 +244,7 @@ body
         border-bottom-right-radius: 30px;
         display: inline-block; 
         margin-bottom: 0; 
+        max-width: 100%;
 
         &.no-radius
         {
@@ -145,6 +294,22 @@ body
             font-size: $fontSizeBase * 2.4;
             line-height: 1.25em;
             position: relative;
+
+            @include breakpoint($smallDesktop)
+            {
+                font-size: $fontSizeBase * 2;
+            } 
+
+            @include breakpoint($tablet)
+            {
+                font-size: $fontSizeBase * 2;
+            } 
+
+            @include breakpoint($allCelular)
+            {
+                font-size: $fontSizeBase * 2;
+            }             
+
         }
 
     }
@@ -166,7 +331,7 @@ body
         font-size: $fontSizeBase * 1.6;
         font-weight: $fontWeightBold;
         float: right;
-        padding: 10px 30px;
+        padding: 10px 25px;
         text-align: center;
         text-transform: uppercase;
         width: 100%;
@@ -203,6 +368,21 @@ body
             float: right;
             padding: 10px 50px;
             width: auto;
+
+            @include breakpoint($tablet)
+            {
+                padding: 10px 40px;
+            }
+
+            @include breakpoint($smallCelular)
+            {
+                display: block;
+                text-align: center;
+                margin: 0 auto;
+                width: 220px;
+                float: none;
+            }
+
             &:hover,
             &:focus 
             {
@@ -251,6 +431,7 @@ body
             padding: 25px;
             overflow: hidden;
             width: 740px;
+            max-width: 100%;
             margin: 0 auto;
 
             .campo 
@@ -365,29 +546,33 @@ body
     .box-paginacao
     {
         text-align: center;
+        margin-top: 70px;
         
         .paginacao
         {
             display: inline-block;
             overflow: hidden;
+            margin: 0 -14px;
+            padding: 0;
 
             li 
             {
-                float: left;
-                margin-right: 15px;
-                border-top-left-radius: 8px;
-                border-bottom-right-radius: 8px;
+                display: inline-block;
+                margin: 0 7px 10px;
+                border-top-left-radius: 6px;
+                border-bottom-right-radius: 6px;
                 overflow: hidden;
-                width: 30px;
-                height: 30px;
+                width: 35px;
+                height: 35px;
 
                 a 
                 {
                     background-color: #f98744;
                     color: #fff;
                     display: block;
+                    font-size: $fontSizeBase * 1.4;
                     font-weight: $fontWeightBold;
-                    padding: 3px 5px;
+                    padding: 5px;
                     transition: $transitionAll5s;
 
                     &:hover,

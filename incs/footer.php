@@ -1,4 +1,4 @@
-    <div id="up-footer" <?php if($pagina != "/index.php" && $pagina != "/representantes.php"): ?>class="no-bg"<?php endif; ?>></div>
+    <div id="up-footer" <?php if($pagina != "/" && $pagina != "/index.php" && $pagina != "/representantes.php"): ?>class="no-bg"<?php endif; ?>></div>
     <footer id="ft-principal">
 
         <div class="container">
@@ -19,9 +19,10 @@
     </footer>
     <!-- end #ft-principal -->
 
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./bower_components/jquery.easing/js/jquery.easing.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     <script src="./js/smoothscroll.min.js"></script>
-    <script src="./js/main.js"></script> 
+    <script src="./js/main.js"></script>  
     </body>
 </html>

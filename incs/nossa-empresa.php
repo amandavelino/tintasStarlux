@@ -8,7 +8,7 @@
 
         <div class="ss-row">
 
-            <div class="ss-box-empresa">
+            <div class="ss-box-empresa ss-empresa-img">
                 <img src="./imgs/nossa-empresa.jpg" border="0">
             </div>
             <!-- end .ss-box-empresa -->

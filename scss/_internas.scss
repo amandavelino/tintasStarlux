@@ -3,10 +3,21 @@
     .ss-internas
     {
         padding-bottom: 120px;
+        overflow: hidden;
         
+        @include breakpoint($allCelular)
+        {
+            padding-bottom: 80px;
+        }  
+
         .hd-sessao 
         {
             margin: 60px 0 50px;
+
+            @include breakpoint($allCelular)
+            {
+                margin: 40px 0;
+            } 
 
             h2 
             {
@@ -24,6 +35,7 @@
         {
             text-transform: uppercase;
             text-align: center;
+
             h3 
             {
                 margin: 0;
@@ -41,10 +53,36 @@
         
         .lista-produtos
         {
+
             .item-produto 
-            {
+            {   
+                @include make-sm-column(4);
+                @include make-md-column(3);
                 @include make-lg-column(3);
                 margin-bottom: 20px;
+
+                @include breakpoint($largeCelular)
+                {
+                   width: 48%;
+                   float: left;
+                }
+
+                @include breakpoint($smallCelular)
+                {
+                   width: 100%;
+                   float: left;
+                   margin: 20px 0;
+                }                
+
+                a 
+                {
+                    &:hover,
+                    &:focus 
+                    {
+                        text-decoration: none;
+                    }
+                }
+
             }
 
             .produto-destaque 
@@ -52,15 +90,26 @@
                 border-right: 0 none;
                 padding-right: 0;
                 width: 100%;
+
+                @include breakpoint($allCelular)
+                {
+                   text-align: center;
+                }
+
                 &::after 
                 {
                     display: none;
                 }
+
             }
 
             .imagem-destacada 
             {
                 right: 0;
+                @include breakpoint($smallCelular)
+                {
+                    right: -15px;
+                }                
             }
 
             figcaption
@@ -81,7 +130,16 @@
     {
         .ss-imagem-produto
         {
+            @include make-sm-column(3);
+            @include make-md-column(3);
             @include make-lg-column(3);
+
+            @include breakpoint($allCelular)
+            {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
             img 
             {
                 border: $borderImageDestacada 2px solid;
@@ -93,6 +151,8 @@
 
         .ss-descricao
         {
+            @include make-sm-column(9);
+            @include make-md-column(9);
             @include make-lg-column(9);
         }     
         
@@ -106,12 +166,38 @@
             padding: 15px 30px;
             margin: 40px 0;
             
+            @include breakpoint($allCelular)
+            {
+                text-align: center;
+            }
+
             h3 
             {
                 color: $colorWhite;
                 display: inline-block;
                 text-transform: uppercase;
                 margin: 0;
+                line-height: 1.7em;
+
+                @include breakpoint($tablet)
+                {
+                    font-size: $fontSizeBase * 1.8;
+                    line-height: 2.5em;
+                }
+
+                @include breakpoint($largeCelular)
+                {
+                    font-size: $fontSizeBase * 1.8;
+                    line-height: 2.5em;
+                }
+
+                @include breakpoint($smallCelular)
+                {
+                    font-size: $fontSizeBase * 1.8;
+                    line-height: 1.2em;
+                    margin-bottom: 10px;
+                }                
+
                 span 
                 {
                     color: $colorSpanBoxCartela;
@@ -151,10 +237,19 @@
 
             li
             {
+                @include make-sm-column(4);
+                @include make-md-column(3);
                 @include make-lg-column(3);
+
                 height: 75px;
                 margin-bottom: 30px;
                 list-style: none;
+
+                @include breakpoint($largeCelular)
+                {
+                    float: left;
+                    width: 50%;
+                }
 
                 figure 
                 {
@@ -273,6 +368,26 @@
                 padding: 0 15px;
                 text-align: center;
 
+                @include breakpoint($smallDesktop)
+                {
+                    width: 14.25%; 
+                }   
+                
+                @include breakpoint($tablet)
+                {
+                    width: 16.6666%; 
+                }                   
+
+                @include breakpoint($largeCelular)
+                {
+                    width: 20%; 
+                }  
+                
+                @include breakpoint($smallCelular)
+                {
+                    width: 50%; 
+                }                  
+
                 .box-cor 
                 {
                     border: 1px solid #bbb;
@@ -304,8 +419,7 @@
         .box-loader
         {
             text-align: center;
-            width: 340px;
-
+            width: 100%;
             img 
             {
                 margin: 0 auto;
@@ -315,6 +429,16 @@
         .box-representante
         {
             @include make-lg-column(6);
+            
+            &:first-child
+            {
+                @include make-md-column(5);
+            }
+
+            &:last-child
+            {
+                @include make-md-column(7);
+            }
 
             .subtitulo
             {
@@ -326,9 +450,7 @@
         .box-representantes
         {
             overflow: hidden;
-            //margin: 30px 0;
         }
-
     
         .box-estado
         {
@@ -391,6 +513,79 @@
 
         }
 
+        //Versão mobile Mapa
+
+            #mapa-representantes
+            {
+                @include breakpoint($allCelular)
+                {
+                    display: none;
+                }
+            }
+
+            #info-box-mobile
+            {
+                display: none;
+                margin-bottom: 30px;
+                
+                .box-select
+                {
+                    position: relative;
+                    
+                    &::after 
+                    {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 5px 5px 0 5px;
+                        border-color: #111 transparent transparent transparent;
+                        position: absolute;
+                        top: 50%;
+                        margin-top: -3px;
+                        right: 2%;
+                    }                
+                }
+
+                select 
+                {
+                    font-size: $fontSizeBase * 1.6;
+                    height: 45px;
+                    outline: none;
+                    padding: 10px;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+
+                    &:focus 
+                    {
+                        outline: none;
+                    }
+                }
+                
+                @include breakpoint($allCelular)
+                {
+                    display: block;                
+                }
+            }  
+            
+            .info-box-estado
+            {
+                display: block;
+                @include breakpoint($allCelular)
+                {
+                    display: none;                
+                }                    
+            }
+
+            .info-box-estado-mobile
+            {
+                display: none;
+                @include breakpoint($allCelular)
+                {
+                    display: block;                
+                }            
+            }
+
     }
 
 /* Dicas e Soluções */
@@ -402,6 +597,21 @@
         { 
             column-count: 3;
             column-gap: 30px;
+
+            @include breakpoint($tablet)
+            {
+                column-count: 2;
+            }
+
+            @include breakpoint($largeCelular)
+            {
+                column-count: 2;
+            }
+
+            @include breakpoint($smallCelular)
+            {
+                column-count: 1;
+            }            
 
             .item
             { 
@@ -421,6 +631,10 @@
                     {
                         border-radius: 0;
                         max-width: 100%;
+                        @include breakpoint($smallCelular)
+                        {
+                            width: 100%;
+                        }                                                
                     }
 
                     &::before 
@@ -431,7 +645,7 @@
                         font-size: $fontSizeBase * 3.5;
                         font-weight: normal;
                         position: absolute;
-                        top: 38%;
+                        top: 50%;
                         left: 50%;
                         margin-left: -16px;
                         z-index: 10;
@@ -493,30 +707,6 @@
         }
 
     }
-
-    @media only screen and (min-width: 700px) {
-        .masonry {
-            -moz-column-count: 2;
-            -webkit-column-count: 2;
-            column-count: 2;
-        }
-    }
-    
-    @media only screen and (min-width: 900px) {
-        .masonry {
-            -moz-column-count: 3;
-            -webkit-column-count: 3;
-            column-count: 3;
-        }
-    }
-    
-    @media only screen and (min-width: 1100px) {
-        .masonry {
-            -moz-column-count: 4;
-            -webkit-column-count: 4;
-            column-count: 4;
-        }
-    }
     
 /* Simulador de Cores */
       
@@ -532,6 +722,27 @@
             margin: 0 0 30px;
         }
 
+        .box-swf
+        {
+            height: 700px;
+
+            @include breakpoint($tablet)
+            {
+                height: 500px;
+            }   
+
+            @include breakpoint($largeCelular)
+            {
+                height: 400px;
+            }     
+            
+            @include breakpoint($smallCelular)
+            {
+                height: 300px;
+            }                 
+
+        }
+
         .lista-simuladores 
         {
             padding: 20px 0 0;
@@ -541,9 +752,24 @@
 
             li 
             {
+                @include make-sm-column(4);
+                @include make-md-column(3);
                 @include make-lg-column(3);
                 list-style: none;
+                margin-bottom: 30px;
                 position: relative;
+
+                @include breakpoint($largeCelular)
+                {
+                    width: 33.3333%;
+                    float: left;
+                }
+
+                @include breakpoint($smallCelular)
+                {
+                    width: 100%;
+                }
+
             }
 
             figure 
@@ -555,6 +781,11 @@
                 {
                     border-radius: 0;
                     max-width: 100%;
+
+                    @include breakpoint($smallCelular)
+                    {
+                        width: 100%;
+                    }                    
                 }
 
                 &::before 
@@ -565,7 +796,7 @@
                     font-size: $fontSizeBase * 3.5;
                     font-weight: normal;
                     position: absolute;
-                    top: 35%;
+                    top: 50%;
                     left: 50%;
                     margin-left: -16px;
                     z-index: 10;
@@ -632,5 +863,6 @@
         img 
         {
             margin-right: 5px;
+            width: 25px;
         }
     }    
