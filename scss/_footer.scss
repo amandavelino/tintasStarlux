@@ -23,14 +23,6 @@
         }
     }
 
-    // .page-internas
-    // {
-    //     #up-footer 
-    //     {
-    //         background-color: transparent;
-    //     }
-    // }
-
     #ft-principal
     {
         background: $bgFooter url("../imgs/detalhe-footer.png") no-repeat 110% 0%;
@@ -97,8 +89,8 @@
             @include breakpoint($allCelular)
             {
                 color: #fff;
+                font-size: 14px;
             } 
-
         }
 
     }

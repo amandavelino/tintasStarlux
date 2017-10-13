@@ -168,6 +168,7 @@
 
     #icon-mobile
     {
+        cursor: pointer;
         display: none;
         position: absolute;
         right: 50%;
@@ -207,117 +208,4 @@
     .hd-bottom
     {
         background: $bgColorHeaderBottom url("../imgs/bg-header-bottom.gif") repeat 0 0;;
-    }
-
-    .menu-mobile
-    {
-        display: block;
-        background-color: #f98744;
-        position: fixed;
-        top: 0;
-        width: 300px;
-        max-width: 100%;
-        right: -300px;
-        height: 100%;
-        z-index: 90;
-
-        @include breakpoint(min-width $allDesktop)
-        {
-            display: none;
-        }
-    
-        #close 
-        {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            z-index: 10;
-            width: 25px;
-            height: 25px;
-            img 
-            {
-                border-radius: 0;
-                max-width: 100%;
-            }
-        }
-
-        li 
-        {
-            list-style: none;
-
-            a 
-            {
-                border-bottom: 1px solid #ffa068;
-                color: #fff;
-                display: block;
-                font-size: $fontSizeBase * 1.5;
-                font-weight: $fontWeightBold;
-                text-transform: uppercase;
-                padding: 10px 0;
-
-                &:focus,
-                &:hover 
-                {
-                    text-decoration: none;
-                }
-
-            }
-
-        }
-
-        & > ul 
-        {
-            padding: 85px 15px 0;
-            margin: 0;
-
-            & > li 
-            {
-
-                //Último li - Área do Representante
-                &:last-child
-                {
-                    margin: 0 -15px;
-                    a
-                    {
-                        background-color: #0e4c6d;
-                        padding: 10px 15px;
-                    }
-                }                
-
-                & > ul 
-                {
-                    background-color: #ec6515;
-                    margin: 0 -15px;
-                    padding: 0;
-                    overflow: hidden;
-
-                    li 
-                    {
-                        margin: 0 15px;
-                        a
-                        {
-                            padding-left: 15px;
-                        }
-
-                        & > ul
-                        {
-                            background-color: #b44909;
-                            margin: 0 -30px;
-                            padding: 0;
-                            li 
-                            {
-                                margin: 0 30px;
-                                a 
-                                {
-                                    padding-left: 30px;
-                                }
-                            }
-                        }
-                    }
-
-                }
-
-            }
-        }
-
     }

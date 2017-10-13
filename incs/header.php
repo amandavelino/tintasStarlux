@@ -74,7 +74,7 @@
                         <div class="menu">
 
                             <ul id="menu-principal">
-                                <li><a href="index.php" class="ativo">Home</a></li>
+                                <li class="ativo"><a href="index.php">Home</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="sobre.php">Sobre a starlux</a>
                                     <ul class="sub-menu">

@@ -11,15 +11,53 @@ body
     {
         margin-top: 170px;          
     } 
-    
+
     @include breakpoint($allCelular)
     {
         margin-top: 170px;
-    }  
+
+        &.page-internas
+        {
+            margin-top: 250px;
+        }
+    }      
 
     &.menu-ativo
     {
         overflow: hidden; 
+    }
+
+    //QUANDO O USUÁRIO ESTIVER LOGADO
+    &.customize-support
+    {
+
+        @include breakpoint($allCelular)
+        {
+            margin-top: 160px;
+        }
+        
+        .menu-mobile,
+        .hd-top
+        {
+            top: 32px;
+        }
+
+        .menu-mobile
+        {
+            & > ul 
+            {
+                max-height: 93%;
+            }   
+        }
+
+    }
+
+    #wpadminbar
+    {
+        @include breakpoint($allCelular)
+        {
+            position: fixed !important;
+        }
     }
 
     .bg-fade 
@@ -61,7 +99,54 @@ body
             color: #0a793e;
             outline: none;
             text-decoration: underline;
-        }        
+        }   
+
+        &.ss-internas
+        {
+            ul,
+            ol 
+            {
+                padding: 0;
+                padding-left: 15px;
+                margin: 0;
+                margin-bottom: 15px;
+    
+                li 
+                {
+                    line-height: 1em;
+                    margin: 0;
+                    margin-bottom: 20px;
+                    padding: 0;
+                }
+    
+            }
+
+            ul 
+            {
+                li 
+                {
+                    list-style: none;
+                    position: relative;
+                    padding-left: 10px;
+
+                    &::before 
+                    {
+                        content: "";
+                        background-color: #f98744;
+                        border-radius: 100%;
+                        width: 5px;
+                        height: 5px;
+
+                        position: absolute;
+                        top: 6px;
+                        left: 0;
+                    }
+
+                }
+            }
+
+        }
+
     }
 
     &.page-internas
@@ -149,7 +234,7 @@ body
         
         @include breakpoint($allCelular)
         {
-            font-size: $fontSizeBase * 2.3;
+            font-size: $fontSizeBase * 2.5;
         }          
     }
 
@@ -351,16 +436,6 @@ body
             display: block;
             margin: 10px 0;
         }
-
-        &.btn-enviar
-        {
-            background-color: $bgBtnContato;
-            &:hover,
-            &:focus  
-            {
-                background-color: $bgBtnHoverContato;
-            }
-        }   
     
         &.btn-cartela
         {
@@ -374,13 +449,13 @@ body
                 padding: 10px 40px;
             }
 
-            @include breakpoint($smallCelular)
+            @include breakpoint($allCelular)
             {
                 display: block;
                 text-align: center;
                 margin: 0 auto;
                 width: 220px;
-                float: none;
+                float: none;                
             }
 
             &:hover,
@@ -393,12 +468,117 @@ body
 
     }
 
+    .btn-enviar
+    {
+        background: $bgBtnHeader;
+        border: 0 none;
+        border-top-left-radius: 8px;
+        border-bottom-right-radius: 8px; 
+        color: $colorBtnHeader;
+        font-size: $fontSizeBase * 1.6;
+        font-weight: $fontWeightBold;
+        float: right;
+        padding: 10px 25px;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        outline: none;
+        transition: $transitionAll5s; 
+
+        &:hover,
+        &:focus  
+        {
+            background-color: $bgBtnHoverContato;
+        }
+    }   
+
+/* CLASSES WORDPRESS */
+
+    a img.alignnone,
+    .alignnone
+    {
+        margin: 5px 0 10px;
+    }
+
+    a img.alignleft,
+    .alignleft
+    {
+        float: left;
+        margin: 5px 30px 10px 0;
+    }
+
+    a img.aligncenter,
+    .aligncenter,
+    div.aligncenter
+    {
+        display: block;
+        margin: 5px auto 10px;
+    }
+
+    a img.alignright,
+    .alignright
+    {
+        float: right;
+        margin: 5px 0 10px 30px;
+    }    
+
+    .wp-caption p.wp-caption-text
+    {
+        color: #1a4164;
+        font-size: $fontSizeBase * 1.2;;
+        line-height: 1.2em;
+        margin: 0;
+        padding: 10px 0;
+    }
+
 /* Contato */
 
     .ss-formulario 
     {
         background-color: $bgContato;
         padding: 0 0 40px;
+
+        /* Classes Qordpress para Formulario */
+            
+            div.wpcf7-response-output
+            {
+                margin: .5em 0;
+                padding: 0.8em 1em;
+                line-height: 1.2em;
+            }           
+
+            span.wpcf7-not-valid-tip
+            {
+                font-size: 13px;
+            }
+
+            div.wpcf7-validation-errors
+            {
+                background: #f7e700;
+                border: 0 none;
+                font-size: 14px;
+                text-align: center;     
+            }
+
+            div.wpcf7-mail-sent-ng
+            {
+                background: #ff0000;
+                border: 0 none;
+                color: #fff;
+                font-size: 14px;
+                text-align: center; 
+            }
+
+            div.wpcf7-mail-sent-ok
+            {
+                background: #398f14;
+                border: 0 none;
+                font-size: 14px;
+                text-align: center;     
+            }
+
+
+        /* Fim Classes Wordpress */
 
         .box-header 
         {
@@ -434,6 +614,11 @@ body
             max-width: 100%;
             margin: 0 auto;
 
+            p 
+            {
+                margin: 0;
+            }
+
             .campo 
             {
                 width: 100%;
@@ -460,9 +645,25 @@ body
 
             .textarea 
             {
+
+                background-color: $bgInput;
+                border: 2px solid transparent;
+                border-top-left-radius: 10px;
+                border-bottom-right-radius: 10px;   
+                color: $colorFontBody;             
+                padding: 8px 10px;
+                width: 100%;
+                outline: none;
                 min-height: 130px;
                 height: 130px;
                 max-height: 130px;
+                transition: $transitionAll5s;
+
+                &:focus
+                {
+                    border-color: $borderInputHover;
+                }
+
             }
 
             ::-webkit-input-placeholder
@@ -564,6 +765,15 @@ body
                 overflow: hidden;
                 width: 35px;
                 height: 35px;
+
+                &.ativa
+                {
+                    background-color: #ab310e;
+                    color: #fff;
+                    font-size: $fontSizeBase * 1.4;
+                    font-weight: $fontWeightBold;                    
+                    padding: 5px;
+                }
 
                 a 
                 {

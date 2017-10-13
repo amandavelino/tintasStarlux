@@ -10,13 +10,14 @@
     font-style: normal;
 }
 
-[class^="icone-"], [class*=" icone-"]
+[class^="icone-icon"], [class*=" icone-icon"]
 {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'starlux' !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
+    font-size: 45px;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
@@ -24,28 +25,56 @@
     /* Better Font Rendering =========== */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
-.icone-icon-banco:before
+.icone-icon-banco
 {
-    content: "\e900";
-    color: #fff;
+    &::before
+    {
+        content: "\e900";
+        color: #377292;
+        transition: all .5s ease-in-out;
+    }
 }
 
-.icone-icon-casa:before
+.icone-icon-casa
 {
-    content: "\e901";
-    color: #fff;
+    &::before
+    {
+        content: "\e901";
+        color: #377292;
+        transition: all .5s ease-in-out;
+    }
 }
 
-.icone-icon-mesa:before
+.icone-icon-mesa
 {
-    content: "\e902";
-    color: #fff;
+    &::before
+    {
+        content: "\e902";
+        color: #377292;
+        transition: all .5s ease-in-out;
+    }
 }
 
-.icone-icon-sofa:before
+.icone-icon-sofa
 {
-    content: "\e903";
-    color: #fff;
+    &::before
+    {
+        content: "\e903";
+        color: #377292;
+        transition: all .5s ease-in-out;
+    }
+}
+
+.item-cartela:hover
+{
+    [class^="icone-icon"]
+    {
+        &::before
+        {
+            color: #fff;
+        }
+    }
 }
